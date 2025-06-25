@@ -1,0 +1,297 @@
+<section class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 scroll-smooth">
+	<!-- Header -->
+	<header class="border-b border-gray-400 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+		<div class="container mx-auto px-4 py-4 flex items-center justify-between">
+			<div class="flex items-center space-x-2">
+				<i data-lucide="trophy" class="h-8 w-8 text-blue-600"></i>
+				<span class="text-2xl font-bold text-gray-900">SportConnect</span>
+			</div>
+			<!-- Desktop Navigation -->
+			<nav class="hidden md:flex items-center space-x-8">
+				<a href="#features" class="text-gray-600 hover:text-blue-600 transition-colors">Características</a>
+				<a href="#benefits" class="text-gray-600 hover:text-blue-600 transition-colors">Beneficios</a>
+				<a href="#pricing" class="text-gray-600 hover:text-blue-600 transition-colors">Precios</a>
+				<a href="/login" class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100">Iniciar Sesión</a>
+			</nav>
+			<!-- Mobile Navigation Toggle -->
+			<button id="mobile-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+				<i data-lucide="menu" class="h-6 w-6"></i>
+				<span class="sr-only">Abrir menú</span>
+			</button>
+		</div>
+	</header>
+
+	<!-- mobile menu -->
+	<div id="mobile-menu" class="fixed top-0 right-0 h-full w-72 bg-white shadow-lg translate-x-full transition-transform duration-300 md:hidden z-50">
+			<div class="p-6 flex items-center justify-between">
+				<div class="flex items-center space-x-2">
+					<i data-lucide="trophy" class="h-6 w-6 text-blue-600"></i>
+					<span class="text-xl font-bold text-gray-900">SportConnect</span>
+				</div>
+				<button id="mobile-close" class="p-2 rounded-lg hover:bg-gray-100">
+					<i data-lucide="x" class="h-6 w-6"></i>
+					<span class="sr-only">Cerrar menú</span>
+				</button>
+			</div>
+			<nav class="flex flex-col space-y-4 px-6">
+				<a href="#features" class="text-lg text-gray-600 hover:text-blue-600 transition-colors py-2 border-b">Características</a>
+				<a href="#benefits" class="text-lg text-gray-600 hover:text-blue-600 transition-colors py-2 border-b">Beneficios</a>
+				<a href="#pricing" class="text-lg text-gray-600 hover:text-blue-600 transition-colors py-2 border-b">Precios</a>
+				<a href="/login" class="mt-4 px-4 py-2 border border-gray-300 rounded-lg text-center text-gray-700 hover:bg-gray-100">Iniciar Sesión</a>
+				<div class="pt-6 space-y-3">
+					<p class="text-sm text-gray-500 text-center">¿No tienes cuenta?</p>
+					<a href="/register/atleta" class="block w-full">
+						<button class="w-full px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 flex items-center justify-center space-x-2">
+							<i data-lucide="users" class="h-4 w-4"></i><span>Registrarse como Atleta</span>
+						</button>
+					</a>
+					<a href="/register/club" class="block w-full">
+						<button class="w-full px-4 py-2 rounded-lg border border-purple-600 text-purple-600 hover:bg-purple-50 flex items-center justify-center space-x-2">
+							<i data-lucide="shield" class="h-4 w-4"></i><span>Registrarse como Club</span>
+						</button>
+					</a>
+				</div>
+			</nav>
+		</div>
+
+	<!-- Hero Section -->
+	<section class="py-20 px-4">
+		<div class="container mx-auto text-center max-w-4xl">
+			<span class="inline-block mb-4 px-4 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium">Plataforma Deportiva #1</span>
+			<h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">Conecta <span class="text-blue-600">Atletas</span> y <span class="text-purple-600">Clubes</span></h1>
+			<p class="text-xl text-gray-600 mb-8 leading-relaxed">
+				La plataforma integral que revoluciona la gestión deportiva. Atletas encuentran su club ideal, clubes gestionan su talento de manera eficiente.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/register/atleta" class="w-full sm:w-auto">
+					<button class="w-full px-8 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 flex items-center justify-center space-x-2 cursor-pointer">
+						<i data-lucide="users" class="h-5 w-5"></i><span>Registrarse como Atleta</span>
+					</button>
+				</a>
+				<a href="/register/club" class="w-full sm:w-auto">
+					<button class="w-full px-8 py-3 rounded-lg border border-purple-600 text-purple-600 hover:text-gray-800 flex items-center justify-center space-x-2 cursor-pointer">
+						<i data-lucide="shield" class="h-5 w-5"></i><span>Registrarse como Club</span>
+					</button>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Features Section -->
+	<section id="features" class="py-20 px-4 bg-white">
+		<div class="container mx-auto">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl font-bold text-gray-900 mb-4">Características Principales</h2>
+				<p class="text-xl text-gray-600 max-w-2xl mx-auto">Todo lo que necesitas para gestionar tu carrera deportiva o tu club en una sola plataforma</p>
+			</div>
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="p-6 shadow-lg hover:shadow-xl rounded-2xl">
+					<div class="w-12 h-12 mb-4 rounded-lg bg-blue-100 flex items-center justify-center"><i data-lucide="bar-chart-3" class="h-6 w-6 text-blue-600"></i></div><h3
+						class="text-lg font-semibold text-gray-900 mb-1"
+					>
+						Dashboard Inteligente
+					</h3><p class="text-gray-600">Resumen completo de estadísticas, rendimiento y métricas en tiempo real</p>
+				</div>
+				<div class="p-6 shadow-lg hover:shadow-xl rounded-2xl">
+					<div class="w-12 h-12 mb-4 rounded-lg bg-green-100 flex items-center justify-center"><i data-lucide="users" class="h-6 w-6 text-green-600"></i></div><h3
+						class="text-lg font-semibold text-gray-900 mb-1"
+					>
+						Gestión de Jugadores
+					</h3><p class="text-gray-600">Sistema avanzado de búsqueda y gestión de atletas con perfiles detallados</p>
+				</div>
+				<div class="p-6 shadow-lg hover:shadow-xl rounded-2xl">
+					<div class="w-12 h-12 mb-4 rounded-lg bg-purple-100 flex items-center justify-center"><i data-lucide="calendar" class="h-6 w-6 text-purple-600"></i></div><h3
+						class="text-lg font-semibold text-gray-900 mb-1"
+					>
+						Calendario Integrado
+					</h3><p class="text-gray-600">Organiza entrenamientos, partidos y eventos con sincronización automática</p>
+				</div>
+				<div class="p-6 shadow-lg hover:shadow-xl rounded-2xl">
+					<div class="w-12 h-12 mb-4 rounded-lg bg-orange-100 flex items-center justify-center"><i data-lucide="trophy" class="h-6 w-6 text-orange-600"></i></div><h3
+						class="text-lg font-semibold text-gray-900 mb-1"
+					>
+						Reportes Avanzados
+					</h3><p class="text-gray-600">Análisis detallados de rendimiento y estadísticas personalizables</p>
+				</div>
+				<div class="p-6 shadow-lg hover:shadow-xl rounded-2xl">
+					<div class="w-12 h-12 mb-4 rounded-lg bg-red-100 flex items-center justify-center"><i data-lucide="shield" class="h-6 w-6 text-red-600"></i></div><h3
+						class="text-lg font-semibold text-gray-900 mb-1"
+					>
+						Gestión de Clubes
+					</h3><p class="text-gray-600">Herramientas completas para administrar clubes y sus miembros</p>
+				</div>
+				<div class="p-6 shadow-lg hover:shadow-xl rounded-2xl">
+					<div class="w-12 h-12 mb-4 rounded-lg bg-yellow-100 flex items-center justify-center"><i data-lucide="zap" class="h-6 w-6 text-yellow-600"></i></div><h3
+						class="text-lg font-semibold text-gray-900 mb-1"
+					>
+						Notificaciones Smart
+					</h3><p class="text-gray-600">Alertas inteligentes y notificaciones personalizadas en tiempo real</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Benefits Section -->
+	<section id="benefits" class="py-20 px-4 bg-gray-50">
+		<div class="container mx-auto">
+			<div class="grid lg:grid-cols-2 gap-16 items-center">
+				<!-- Athletes -->
+				<div>
+					<h2 class="text-4xl font-bold text-gray-900 mb-6">Para Atletas</h2>
+					<div class="space-y-4">
+						<div class="flex items-start space-x-3">
+							<i data-lucide="check-circle" class="h-6 w-6 text-green-500 mt-1"></i><div>
+								<h3 class="font-semibold text-gray-900">Encuentra tu Club Ideal</h3><p class="text-gray-600">Busca y conecta con clubes que se adapten a tu nivel y objetivos</p>
+							</div>
+						</div>
+						<div class="flex items-start space-x-3">
+							<i data-lucide="check-circle" class="h-6 w-6 text-green-500 mt-1"></i><div>
+								<h3 class="font-semibold text-gray-900">Acceso Gratuito</h3><p class="text-gray-600">Regístrate y usa la plataforma sin costo alguno</p>
+							</div>
+						</div>
+						<div class="flex items-start space-x-3">
+							<i data-lucide="check-circle" class="h-6 w-6 text-green-500 mt-1"></i><div>
+								<h3 class="font-semibold text-gray-900">Seguimiento de Progreso</h3><p class="text-gray-600">Monitorea tu desarrollo y estadísticas deportivas</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Clubs -->
+				<div>
+					<h2 class="text-4xl font-bold text-gray-900 mb-6">Para Clubes</h2>
+					<div class="space-y-4">
+						<div class="flex items-start space-x-3">
+							<i data-lucide="check-circle" class="h-6 w-6 text-blue-500 mt-1"></i><div>
+								<h3 class="font-semibold text-gray-900">Gestión Integral</h3><p class="text-gray-600">Administra jugadores, entrenamientos y competencias desde un solo lugar</p>
+							</div>
+						</div>
+						<div class="flex items-start space-x-3">
+							<i data-lucide="check-circle" class="h-6 w-6 text-blue-500 mt-1"></i><div>
+								<h3 class="font-semibold text-gray-900">Reclutamiento Eficiente</h3><p class="text-gray-600">Encuentra y recluta nuevos talentos de manera sencilla</p>
+							</div>
+						</div>
+						<div class="flex items-start space-x-3">
+							<i data-lucide="check-circle" class="h-6 w-6 text-blue-500 mt-1"></i><div>
+								<h3 class="font-semibold text-gray-900">Análisis Avanzado</h3><p class="text-gray-600">Reportes detallados para tomar mejores decisiones</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pricing Section -->
+	<section id="pricing" class="py-20 px-4 bg-white">
+		<div class="container mx-auto text-center">
+			<h2 class="text-4xl font-bold text-gray-900 mb-4">Precios Transparentes</h2>
+			<p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">Atletas gratis siempre. Clubes con planes flexibles para cada necesidad.</p>
+			<div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+				<!-- Athletes Free -->
+				<div class="relative border-2 border-green-200 rounded-2xl p-6 flex flex-col items-center">
+					<span class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-green-500 text-white text-sm">Gratis</span>
+					<h3 class="text-2xl font-semibold mb-2">Atletas</h3>
+					<p class="text-4xl font-bold text-green-600 mb-1">$0</p>
+					<p class="text-gray-500 mb-6">Para siempre</p>
+					<ul class="space-y-2 text-gray-600 text-sm text-left w-full max-w-[220px]">
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i><span>Perfil completo</span></li>
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i><span>Búsqueda de clubes</span></li>
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i><span>Estadísticas básicas</span></li>
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i><span>Notificaciones</span></li>
+					</ul>
+				</div>
+				<!-- Club Basic -->
+				<div class="relative border-2 border-blue-200 rounded-2xl p-6 flex flex-col items-center">
+					<h3 class="text-2xl font-semibold mb-2">Club Básico</h3>
+					<p class="text-4xl font-bold text-blue-600 mb-1">$29</p>
+					<p class="text-gray-500 mb-6">por mes</p>
+					<ul class="space-y-2 text-gray-600 text-sm text-left w-full max-w-[220px]">
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-blue-500"></i><span>Hasta 50 jugadores</span></li>
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-blue-500"></i><span>Calendario completo</span></li>
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-blue-500"></i><span>Reportes básicos</span></li>
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-blue-500"></i><span>Soporte por email</span></li>
+					</ul>
+				</div>
+				<!-- Club Premium -->
+				<div class="relative border-2 border-purple-200 rounded-2xl p-6 flex flex-col items-center bg-white shadow-sm">
+					<span class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-purple-500 text-white text-sm">Popular</span>
+					<h3 class="text-2xl font-semibold mb-2">Club Premium</h3>
+					<p class="text-4xl font-bold text-purple-600 mb-1">$79</p>
+					<p class="text-gray-500 mb-6">por mes</p>
+					<ul class="space-y-2 text-gray-600 text-sm text-left w-full max-w-[220px]">
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-purple-500"></i><span>Jugadores ilimitados</span></li>
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-purple-500"></i><span>Reportes avanzados</span></li>
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-purple-500"></i><span>API personalizada</span></li>
+						<li class="flex items-center space-x-2"><i data-lucide="check-circle" class="h-4 w-4 text-purple-500"></i><span>Soporte prioritario</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
+		<div class="container mx-auto text-center">
+			<h2 class="text-4xl font-bold text-white mb-6">¿Listo para comenzar?</h2>
+			<p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Únete a miles de atletas y clubes que ya están transformando su experiencia deportiva</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/register/atleta" class="w-full sm:w-auto"><button class="w-full px-8 py-3 rounded-lg bg-white text-blue-600 hover:bg-gray-200 cursor-pointer">Comenzar como Atleta</button></a>
+				<a href="/register/club" class="w-full sm:w-auto">
+					<button class="w-full px-8 py-3 rounded-lg border border-white text-white hover:bg-white hover:text-blue-600 cursor-pointer">Comenzar como Club</button>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-gray-900 text-white py-12 px-4">
+		<div class="container mx-auto">
+			<div class="grid md:grid-cols-4 gap-8">
+				<div>
+					<div class="flex items-center space-x-2 mb-4"><i data-lucide="trophy" class="h-6 w-6 text-blue-400"></i><span class="text-xl font-bold">SportConnect</span></div>
+					<p class="text-gray-400">La plataforma que conecta el mundo deportivo</p>
+				</div>
+				<div>
+					<h3 class="font-semibold mb-4">Producto</h3>
+					<ul class="space-y-2 text-gray-400">
+						<li><a href="#features" class="hover:text-white transition-colors">Características</a></li>
+						<li><a href="#pricing" class="hover:text-white transition-colors">Precios</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">API</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="font-semibold mb-4">Soporte</h3>
+					<ul class="space-y-2 text-gray-400">
+						<li><a href="#" class="hover:text-white transition-colors">Ayuda</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">Contacto</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">Estado</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="font-semibold mb-4">Legal</h3>
+					<ul class="space-y-2 text-gray-400">
+						<li><a href="#" class="hover:text-white transition-colors">Privacidad</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">Términos</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">Cookies</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"><p>&copy; 2024 SportConnect. Todos los derechos reservados.</p></div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			lucide.createIcons();
+			const mobileToggle = document.getElementById('mobile-toggle');
+			const mobileClose = document.getElementById('mobile-close');
+			const mobileMenu = document.getElementById('mobile-menu');
+			const closeMenu = () => mobileMenu.classList.add('translate-x-full');
+			const openMenu = () => mobileMenu.classList.remove('translate-x-full');
+			mobileToggle.addEventListener('click', openMenu);
+			mobileClose.addEventListener('click', closeMenu);
+			[...mobileMenu.querySelectorAll('a')].forEach((link) => link.addEventListener('click', closeMenu));
+		});
+	</script>
+</section>
