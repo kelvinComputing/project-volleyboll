@@ -180,10 +180,10 @@
 				didOpen: () => Swal.showLoading()
 			});
 
-			const res = await fetch('https://livosport.loca.lt/loggin/', {
+			const res = await fetch('/api/loggin/', {
 				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				// credentials: 'include',
+				headers: { 'Content-Type': 'application/json'},
+				credentials: 'include',
 				body: JSON.stringify(datas)
 			});
 
@@ -201,7 +201,7 @@
 				timerProgressBar: true,
 				showConfirmButton: false
 			}).then(() => {
-				
+				        
 				window.location.href = '/';
 			});
 		} catch (err) {
