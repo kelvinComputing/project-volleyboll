@@ -96,7 +96,7 @@
 				</div>
 			</div>
 			<div class="p-6 pt-0">
-				<form class="space-y-4">
+				<form id="loginForm" class="space-y-4">
 					<div class="space-y-6">
 						<label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="email">Email</label>
 						<input
@@ -158,4 +158,60 @@
 
 	const active = document.querySelector('[role="tab"][data-state="active"]');
 	if (active) setRegisterHref(active.dataset.type);
+</script>
+
+<script defer>
+	document.getElementById('loginForm').addEventListener('submit', async (e) => {
+		e.preventDefault();
+
+		const email = document.getElementById('email').value.trim();
+		const password = document.getElementById('password').value;
+
+		const datas = {
+			email,
+			password
+		};
+
+		try {
+			Swal.fire({
+				title: 'Iniciando sesión…',
+				html: 'Por favor espera',
+				allowOutsideClick: false,
+				didOpen: () => Swal.showLoading()
+			});
+
+			const res = await fetch('https://livosport.loca.lt/loggin/', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				// credentials: 'include',
+				body: JSON.stringify(datas)
+			});
+
+			const data = await res.json();
+
+			if (!res.ok) {
+				throw new Error(data.error || 'Error desconocido');
+			}
+
+			Swal.fire({
+				icon: 'success',
+				title: '¡Bienvenido!',
+				text: 'Has iniciado sesión correctamente',
+				timer: 2000,
+				timerProgressBar: true,
+				showConfirmButton: false
+			}).then(() => {
+				
+				window.location.href = '/';
+			});
+		} catch (err) {
+			Swal.close();
+			Swal.fire({
+				icon: 'error',
+				title: 'Error',
+				text: err.message,
+				confirmButtonText: 'Intentar de nuevo'
+			});
+		}
+	});
 </script>
