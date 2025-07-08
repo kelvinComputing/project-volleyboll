@@ -1,0 +1,42 @@
+<div class=" w-64  sidebar-transition">
+	<div class="p-6">
+		<div class="flex items-center space-x-2 mb-8">
+			<i data-lucide="trophy" class="h-8 w-8 text-blue-600"></i>
+			<span class="text-xl font-bold text-gray-900">VolleyClub</span>
+		</div>
+
+		<nav class="space-y-2">
+			<button onclick="showModule('dashboard')" class="nav-item w-full flex items-center px-4 py-2 text-left rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+				<i data-lucide="layout-dashboard" class="mr-3 h-4 w-4"></i>
+				Dashboard
+			</button>
+			<button onclick="showModule('players')" class="nav-item w-full flex items-center px-4 py-2 text-left rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+				<i data-lucide="users" class="mr-3 h-4 w-4"></i>
+				Jugadores
+			</button>
+			<button onclick="showModule('reports')" class="nav-item w-full flex items-center px-4 py-2 text-left rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+				<i data-lucide="file-text" class="mr-3 h-4 w-4"></i>
+				Reportes
+			</button>
+			<button onclick="showModule('calendar')" class="nav-item w-full flex items-center px-4 py-2 text-left rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+				<i data-lucide="calendar" class="mr-3 h-4 w-4"></i>
+				Calendario
+			</button>
+			<button onclick="showModule('club')" class="nav-item w-full flex items-center px-4 py-2 text-left rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+				<i data-lucide="building" class="mr-3 h-4 w-4"></i>
+				Club
+			</button>
+			<button onclick="showModule('payments')" class="nav-item w-full flex items-center px-4 py-2 text-left rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+				<i data-lucide="credit-card" class="mr-3 h-4 w-4"></i>
+				Pagos
+			</button>
+		</nav>
+	</div>
+
+	<div class="absolute bottom-0 w-64 p-6">
+		<button class="w-full flex items-center px-4 py-2 text-left rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+			<i data-lucide="settings" class="mr-3 h-4 w-4"></i>
+			Configuración
+		</button>
+	</div>
+</div>

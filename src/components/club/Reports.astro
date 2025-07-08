@@ -1,0 +1,180 @@
+<div class="space-y-6 fade-in">
+	<div class="flex justify-between items-center">
+		<div>
+			<h2 class="text-3xl font-bold tracking-tight text-gray-900">Reportes y Estadísticas</h2>
+			<p class="text-gray-600 mt-1">Analiza el rendimiento y progreso del club</p>
+		</div>
+		<div class="flex space-x-3">
+			<button class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 flex items-center">
+				<i data-lucide="download" class="mr-2 h-4 w-4"></i>
+				Exportar
+			</button>
+			<button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center">
+				<i data-lucide="plus" class="mr-2 h-4 w-4"></i>
+				Nuevo Reporte
+			</button>
+		</div>
+	</div>
+
+	<!-- Report Cards -->
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+		<div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
+			<div class="flex items-center justify-between mb-4">
+				<h3 class="text-lg font-semibold text-gray-900">Asistencia Mensual</h3>
+				<div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+					<i data-lucide="users" class="h-5 w-5 text-blue-600"></i>
+				</div>
+			</div>
+			<div class="space-y-3">
+				<div class="flex justify-between items-center">
+					<span class="text-sm text-gray-600">Promedio</span>
+					<span class="text-2xl font-bold text-gray-900">87%</span>
+				</div>
+				<div class="w-full bg-gray-200 rounded-full h-2">
+					<div class="bg-blue-600 h-2 rounded-full progress-bar" style="width: 87%"></div>
+				</div>
+				<p class="text-xs text-green-600">+5% vs mes anterior</p>
+			</div>
+		</div>
+
+		<div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
+			<div class="flex items-center justify-between mb-4">
+				<h3 class="text-lg font-semibold text-gray-900">Rendimiento</h3>
+				<div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+					<i data-lucide="trending-up" class="h-5 w-5 text-green-600"></i>
+				</div>
+			</div>
+			<div class="space-y-3">
+				<div class="flex justify-between items-center">
+					<span class="text-sm text-gray-600">Partidos Ganados</span>
+					<span class="text-2xl font-bold text-gray-900">75%</span>
+				</div>
+				<div class="w-full bg-gray-200 rounded-full h-2">
+					<div class="bg-green-600 h-2 rounded-full progress-bar" style="width: 75%"></div>
+				</div>
+				<p class="text-xs text-green-600">+12% vs temporada anterior</p>
+			</div>
+		</div>
+
+		<div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 card-hover">
+			<div class="flex items-center justify-between mb-4">
+				<h3 class="text-lg font-semibold text-gray-900">Ingresos</h3>
+				<div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+					<i data-lucide="dollar-sign" class="h-5 w-5 text-purple-600"></i>
+				</div>
+			</div>
+			<div class="space-y-3">
+				<div class="flex justify-between items-center">
+					<span class="text-sm text-gray-600">Este mes</span>
+					<span class="text-2xl font-bold text-gray-900">$2,450</span>
+				</div>
+				<div class="w-full bg-gray-200 rounded-full h-2">
+					<div class="bg-purple-600 h-2 rounded-full progress-bar" style="width: 82%"></div>
+				</div>
+				<p class="text-xs text-green-600">+15% vs mes anterior</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Detailed Reports -->
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+		<div class="bg-white rounded-xl shadow-sm border border-gray-200">
+			<div class="p-6 border-b border-gray-200">
+				<h3 class="text-lg font-semibold text-gray-900">Estadísticas por Equipo</h3>
+			</div>
+			<div class="p-6">
+				<div class="space-y-4">
+					<div class="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
+						<div class="flex items-center space-x-3">
+							<div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+								<span class="text-white text-xs font-bold">S</span>
+							</div>
+							<div>
+								<p class="font-medium text-gray-900">Equipo Senior</p>
+								<p class="text-sm text-gray-600">12 jugadores</p>
+							</div>
+						</div>
+						<div class="text-right">
+							<p class="text-lg font-bold text-gray-900">85%</p>
+							<p class="text-xs text-gray-600">Asistencia</p>
+						</div>
+					</div>
+
+					<div class="flex items-center justify-between p-4 bg-pink-50 rounded-lg">
+						<div class="flex items-center space-x-3">
+							<div class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center">
+								<span class="text-white text-xs font-bold">F</span>
+							</div>
+							<div>
+								<p class="font-medium text-gray-900">Equipo Femenino</p>
+								<p class="text-sm text-gray-600">8 jugadoras</p>
+							</div>
+						</div>
+						<div class="text-right">
+							<p class="text-lg font-bold text-gray-900">92%</p>
+							<p class="text-xs text-gray-600">Asistencia</p>
+						</div>
+					</div>
+
+					<div class="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+						<div class="flex items-center space-x-3">
+							<div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+								<span class="text-white text-xs font-bold">J</span>
+							</div>
+							<div>
+								<p class="font-medium text-gray-900">Equipo Juvenil</p>
+								<p class="text-sm text-gray-600">4 jugadores</p>
+							</div>
+						</div>
+						<div class="text-right">
+							<p class="text-lg font-bold text-gray-900">78%</p>
+							<p class="text-xs text-gray-600">Asistencia</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-white rounded-xl shadow-sm border border-gray-200">
+			<div class="p-6 border-b border-gray-200">
+				<h3 class="text-lg font-semibold text-gray-900">Próximos Eventos</h3>
+			</div>
+			<div class="p-6">
+				<div class="space-y-4">
+					<div class="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+							<i data-lucide="calendar" class="h-6 w-6 text-blue-600"></i>
+						</div>
+						<div class="flex-1">
+							<p class="font-medium text-gray-900">Partido vs Club Atlético</p>
+							<p class="text-sm text-gray-600">Mañana, 19:00</p>
+						</div>
+						<span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">Partido</span>
+					</div>
+
+					<div class="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg">
+						<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+							<i data-lucide="activity" class="h-6 w-6 text-green-600"></i>
+						</div>
+						<div class="flex-1">
+							<p class="font-medium text-gray-900">Entrenamiento Técnico</p>
+							<p class="text-sm text-gray-600">Viernes, 17:00</p>
+						</div>
+						<span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Entrenamiento</span>
+					</div>
+
+					<div class="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg">
+						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+							<i data-lucide="trophy" class="h-6 w-6 text-purple-600"></i>
+						</div>
+						<div class="flex-1">
+							<p class="font-medium text-gray-900">Torneo Regional</p>
+							<p class="text-sm text-gray-600">Próximo mes</p>
+						</div>
+						<span class="px-2 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">Torneo</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

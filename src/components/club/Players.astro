@@ -1,0 +1,177 @@
+<div class="space-y-6">
+	<div class="flex justify-between items-center">
+		<div>
+			<h2 class="text-3xl font-bold tracking-tight">Gestión de Jugadores</h2>
+			<p class="text-gray-600">Administra la información de todos los jugadores del club</p>
+		</div>
+		<button onclick="openPlayerModal()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
+			<i data-lucide="plus" class="mr-2 h-4 w-4"></i>
+			Nuevo Jugador
+		</button>
+	</div>
+
+	<!-- Search and Filters -->
+	<div class="bg-white rounded-lg shadow-sm border border-gray-200">
+		<div class="p-6 border-b border-gray-200">
+			<h3 class="text-lg font-semibold">Buscar Jugadores</h3>
+		</div>
+		<div class="p-6">
+			<div class="flex space-x-4">
+				<div class="relative flex-1">
+					<i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4"></i>
+					<input
+						type="text"
+						placeholder="Buscar por nombre, posición o equipo..."
+						class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+					/>
+				</div>
+				<select class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+					<option>Filtrar por equipo</option>
+					<option>Todos los equipos</option>
+					<option>Senior</option>
+					<option>Juvenil</option>
+					<option>Femenino</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<!-- Players Table -->
+	<div class="bg-white rounded-lg shadow-sm border border-gray-200">
+		<div class="p-6 border-b border-gray-200">
+			<h3 class="text-lg font-semibold">Lista de Jugadores</h3>
+			<p class="text-sm text-gray-600">3 jugadores encontrados</p>
+		</div>
+		<div class="overflow-x-auto">
+			<table class="w-full">
+				<thead class="bg-gray-50">
+					<tr>
+						<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Jugador</th>
+						<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Posición</th>
+						<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Equipo</th>
+						<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Edad</th>
+						<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contacto</th>
+						<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estado</th>
+						<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
+					</tr>
+				</thead>
+				<tbody class="bg-white divide-y divide-gray-200">
+					<tr>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-medium">CR</div>
+								<span class="font-medium">Carlos Rodríguez</span>
+							</div>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">Atacante</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">Senior</span>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">24</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<div class="space-y-1">
+								<div class="flex items-center text-sm">
+									<i data-lucide="phone" class="mr-1 h-3 w-3"></i>
+									+1234567890
+								</div>
+								<div class="flex items-center text-sm">
+									<i data-lucide="mail" class="mr-1 h-3 w-3"></i>
+									carlos@email.com
+								</div>
+							</div>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Activo</span>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<div class="flex space-x-2">
+								<button class="p-1 text-gray-400 hover:text-gray-600">
+									<i data-lucide="edit" class="h-4 w-4"></i>
+								</button>
+								<button class="p-1 text-gray-400 hover:text-red-600">
+									<i data-lucide="trash-2" class="h-4 w-4"></i>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center text-white text-sm font-medium">MG</div>
+								<span class="font-medium">María González</span>
+							</div>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">Libero</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<span class="px-2 py-1 text-xs font-medium bg-pink-100 text-pink-800 rounded-full">Femenino</span>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">22</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<div class="space-y-1">
+								<div class="flex items-center text-sm">
+									<i data-lucide="phone" class="mr-1 h-3 w-3"></i>
+									+1234567891
+								</div>
+								<div class="flex items-center text-sm">
+									<i data-lucide="mail" class="mr-1 h-3 w-3"></i>
+									maria@email.com
+								</div>
+							</div>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Activo</span>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<div class="flex space-x-2">
+								<button class="p-1 text-gray-400 hover:text-gray-600">
+									<i data-lucide="edit" class="h-4 w-4"></i>
+								</button>
+								<button class="p-1 text-gray-400 hover:text-red-600">
+									<i data-lucide="trash-2" class="h-4 w-4"></i>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<div class="flex items-center space-x-3">
+								<div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-medium">JP</div>
+								<span class="font-medium">Juan Pérez</span>
+							</div>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">Central</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Juvenil</span>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">18</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<div class="space-y-1">
+								<div class="flex items-center text-sm">
+									<i data-lucide="phone" class="mr-1 h-3 w-3"></i>
+									+1234567892
+								</div>
+								<div class="flex items-center text-sm">
+									<i data-lucide="mail" class="mr-1 h-3 w-3"></i>
+									juan@email.com
+								</div>
+							</div>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<span class="px-2 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">Lesionado</span>
+						</td>
+						<td class="px-6 py-4 whitespace-nowrap">
+							<div class="flex space-x-2">
+								<button class="p-1 text-gray-400 hover:text-gray-600">
+									<i data-lucide="edit" class="h-4 w-4"></i>
+								</button>
+								<button class="p-1 text-gray-400 hover:text-red-600">
+									<i data-lucide="trash-2" class="h-4 w-4"></i>
+								</button>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

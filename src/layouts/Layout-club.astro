@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+import '../styles/main.css';
+import Header from '../components/club/Header.astro';
+import Sidebar from '../components/club/Sidebar.astro';
+import Dasboard from '../components/club/Dasboard.astro';
+import Players from '../components/club/Players.astro';
+import Reports from '../components/club/Reports.astro';
+import Calendar from '../components/club/Calendar.astro';
+import Club from '../components/club/Club.astro';
+import Payments from '../components/club/Payments.astro';
+import Modals from '../components/club/Modals.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<meta name="generator" content={Astro.generator} />
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+		<title>Astro Basics</title>
+	</head>
+	<body class="bg-gray-50">
+		<div class="flex h-screen">
+			<!-- Sidebar Container -->
+			<div id="sidebar-container" class="flex-shrink-0 bg-white">
+				<Sidebar />
+			</div>
+
+			<!-- Main Content -->
+			<div class="flex-1 flex flex-col overflow-hidden">
+				<!-- Header Container -->
+				<div id="header-container">
+					<Header />
+				</div>
+
+				<!-- Main Content Area -->
+				<main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 p-6">
+					<div id="dashboard-module" class="module-content">
+						<Dasboard />
+					</div>
+
+					<!-- Players Module -->
+					<div id="players-module" class="module-content hidden">
+						<Players />
+					</div>
+
+					<!-- Reports Module -->
+					<di id="reports-module" class="module-content hidden">
+						<Reports />
+					</di>
+
+					<!-- Calendar Module -->
+					<div id="calendar-module" class="module-content hidden">
+						<Calendar />
+					</div>
+
+					<!-- Club Module -->
+					<div id="club-module" class="module-content hidden">
+						<Club />
+					</div>
+
+					<!-- Payments Module -->
+					<div id="payments-module" class="module-content hidden">
+						<Payments />
+					</div>
+				</main>
+			</div>
+		</div>
+
+		<!-- Modals Container -->
+		<div id="modals-container">
+			<Modals />
+		</div>
+
+		<script src="/src/scripts/main.js" defer></script>
+	</body>
+</html>
