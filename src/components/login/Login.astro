@@ -100,7 +100,7 @@
 					<div class="space-y-6">
 						<label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="email">Email</label>
 						<input
-							type="email"
+							type="text"
 							class="flex h-10 w-full rounded-md border border-input border-gray-200 bg-background px-3 py-4 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2"
 							id="email"
 							placeholder="tu@email.com"
@@ -164,12 +164,18 @@
 	document.getElementById('loginForm').addEventListener('submit', async (e) => {
 		e.preventDefault();
 
-		const email = document.getElementById('email').value.trim();
+		const username = document.getElementById('email').value.trim();
 		const password = document.getElementById('password').value;
 
+		const activeTab = document.querySelector('[data-state="active"]');
+		const tipo_usuario = activeTab ? activeTab.getAttribute('data-type') : '';
+
+		console.log('Tipo de usuario seleccionado:', tipo_usuario);
+
 		const datas = {
-			email,
-			password
+			username,
+			password,
+			tipo_usuario
 		};
 
 		try {
@@ -182,7 +188,7 @@
 
 			const res = await fetch('/api/loggin/', {
 				method: 'POST',
-				headers: { 'Content-Type': 'application/json'},
+				headers: { 'Content-Type': 'application/json' },
 				credentials: 'include',
 				body: JSON.stringify(datas)
 			});
@@ -201,8 +207,13 @@
 				timerProgressBar: true,
 				showConfirmButton: false
 			}).then(() => {
-				        
-				window.location.href = '/';
+				if (tipo_usuario === 'club') {
+					window.location.href = '/club';
+				} else if (tipo_usuario === 'atleta') {
+					window.location.href = '/atleta';
+				} else {
+					window.location.href = '/';
+				}
 			});
 		} catch (err) {
 			Swal.close();
