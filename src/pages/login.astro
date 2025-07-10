@@ -1,6 +1,16 @@
 ---
 import Login from '../components/login/Login.astro';
 import Layout from '../layouts/Layout.astro';
+
+const userSession = Astro.cookies.get('serial_club');
+
+if (userSession) {
+	if (userSession.value === 'sinSerial') {
+		return Astro.redirect('/atleta');
+	}
+
+	return Astro.redirect('/club');
+}
 ---
 
 <Layout>
