@@ -196,7 +196,7 @@
 			const data = await res.json();
 
 			if (!res.ok) {
-				throw new Error(data.error || 'Error desconocido');
+				throw new Error(data.detail[0] || 'Error desconocido');
 			}
 
 			Swal.fire({

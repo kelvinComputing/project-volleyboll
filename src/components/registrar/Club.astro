@@ -49,27 +49,41 @@
 
 			<div class="p-6 pt-0">
 				<form id="clubForm" class="space-y-6" action="" method="POST" enctype="multipart/form-data">
-					<div class="space-y-2">
-						<label for="clubName" class="text-sm font-medium leading-none">Nombre del Club</label>
-						<input
-							id="clubName"
-							name="clubName"
-							type="text"
-							required
-							placeholder="Nombre de tu club"
-							class="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 mt-2"
-						/>
+					<div class="grid md:grid-cols-2 gap-4">
+						<div class="space-y-2">
+							<label for="clubName" class="text-sm font-medium leading-none">Nombre del Club</label>
+							<input
+								id="clubName"
+								name="clubName"
+								type="text"
+								required
+								placeholder="Nombre de tu club"
+								class="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 mt-2"
+							/>
+						</div>
+
+						<div class="space-y-2">
+							<label for="clubUsuario" class="text-sm font-medium leading-none">Usuario</label>
+							<input
+								id="clubUsuario"
+								name="clubUsuario"
+								type="text"
+								required
+								placeholder="Nombre de tu club"
+								class="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 mt-2"
+							/>
+						</div>
 					</div>
 
 					<div class="grid md:grid-cols-2 gap-4">
 						<div class="space-y-2">
-							<label for="email" class="text-sm font-medium leading-none">Email del Club</label>
+							<label for="apellido" class="text-sm font-medium leading-none">Apellido</label>
 							<input
-								id="email"
-								name="email"
-								type="email"
+								id="apellido"
+								name="apellido"
+								type="text"
 								required
-								placeholder="club@email.com"
+								placeholder="Apellido"
 								class="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 mt-2"
 							/>
 						</div>
@@ -165,16 +179,30 @@
 						/>
 					</div> -->
 
-					<div class="space-y-2">
-						<label for="logo" class="text-sm font-medium leading-none">Logo del Club</label>
-						<input
-							id="logo"
-							name="logo"
-							type="file"
-							accept="image/*"
-							class="flex w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 mt-2"
-							required
-						/>
+					<div class="grid md:grid-cols-2 gap-4">
+						<div class="space-y-2">
+							<label for="logo" class="text-sm font-medium leading-none">Logo del Club</label>
+							<input
+								id="logo"
+								name="logo"
+								type="file"
+								accept="image/*"
+								class="flex w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 mt-2"
+								required
+							/>
+						</div>
+
+						<div class="space-y-2">
+							<label for="email" class="text-sm font-medium leading-none">Email del Club</label>
+							<input
+								id="email"
+								name="email"
+								type="email"
+								required
+								placeholder="club@email.com"
+								class="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 mt-2"
+							/>
+						</div>
 					</div>
 
 					<div class="space-y-2">
@@ -214,14 +242,16 @@
 		data.append('nombre_club', input.clubName.value.trim());
 		data.append('nombre_encargado', input.contactPerson.value.trim());
 		data.append('email', input.email.value.trim());
+		data.append('usuario_club', input.clubUsuario.value.trim());
 		data.append('password', input.password.value);
+		data.append('apellido', input.apellido.value.trim());
 		data.append('telefono', input.phone.value.trim());
-		data.append('direccion_club', input.location.value.trim());
 		data.append('descripcion', input.description.value.trim());
 		data.append('deporte_id', Number(input.sport.value));
 		if (input.logo.files.length) {
 			data.append('logo', input.logo.files[0]);
 		}
+		data.append('direccion_club', input.location.value.trim());
 
 		try {
 			Swal.fire({
@@ -231,9 +261,9 @@
 				didOpen: () => Swal.showLoading()
 			});
 
-			const res = await fetch('https://livosport.loca.lt/clubes/api/registro-club/', {
+			const res = await fetch('/api/clubes/api/registro-club/', {
 				method: 'POST',
-				body: data 
+				body: data
 			});
 
 			if (!res.ok) {
@@ -253,7 +283,7 @@
 				timerProgressBar: true,
 				showConfirmButton: false
 			}).then(() => {
-				window.location.href = '/'; 
+				window.location.href = '/';
 			});
 		} catch (err) {
 			Swal.close();
